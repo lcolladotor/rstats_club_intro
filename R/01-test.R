@@ -1,18 +1,21 @@
+## Related notes:
+## https://docs.google.com/document/d/1oAW3z9eo0LRAPeEqqm4VyPfOz8NF0vhfd76jwcJkkog/edit?usp=sharing
+
 ## R package dependencies
 if (!requireNamespace("here", quietly = TRUE)) {
-  install.packages("here")
+    install.packages("here")
 }
 library("here")
 if (!requireNamespace("sessioninfo", quietly = TRUE)) {
-  install.packages("sessioninfo")
+    install.packages("sessioninfo")
 }
 library("sessioninfo")
 if (!requireNamespace("usethis", quietly = TRUE)) {
-  install.packages("usethis")
+    install.packages("usethis")
 }
 library("usethis")
 if (!requireNamespace("styler", quietly = TRUE)) {
-  install.packages("styler")
+    install.packages("styler")
 }
 library("styler")
 # library('leo')
@@ -47,6 +50,20 @@ usethis::edit_r_profile()
 
 ## Style code
 styler::style_file(here::here("R", "01-test.R"), transformers = styler::tidyverse_style())
+
+## Advanced Bioc-style code that I want to make into a function
+bioc_style <- styler::tidyverse_style(indent_by = 4)
+bioc_style$indention$update_indention_ref_fun_dec <- function(pd_nested) {
+    if (pd_nested$token[1] == "FUNCTION") {
+        seq <- rlang::seq2(3, nrow(pd_nested) - 2)
+        pd_nested$indention_ref_pos_id[seq] <- pd_nested$pos_id[nrow(pd_nested)]
+        pd_nested$indent[seq] <- pd_nested$indent[seq] + 4
+    }
+    pd_nested
+}
+
+styler::style_dir(here::here("R"), transformers = bioc_style)
+
 
 ## Version control
 usethis::use_git()
