@@ -48,6 +48,9 @@ usethis::edit_r_profile()
 ## Style code
 styler::style_file(here::here("R", "01-test.R"), transformers = styler::tidyverse_style())
 
+## Version control
+usethis::use_git()
+
 ## Reproducibility information
 print("Reproducibility information:")
 Sys.time()
@@ -55,7 +58,7 @@ proc.time() ## How long has a process being running
 options(width = 120)
 sessioninfo::session_info()
 
-# ─ Session info ────────────────────────────────────────────────────────
+# ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
 #  setting  value
 #  version  R version 3.6.3 (2020-02-29)
 #  os       macOS Catalina 10.15.4
@@ -67,7 +70,7 @@ sessioninfo::session_info()
 #  tz       America/New_York
 #  date     2020-04-17
 #
-# ─ Packages ────────────────────────────────────────────────────────────
+# ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
 #  package     * version date       lib source
 #  assertthat    0.2.1   2019-03-21 [1] CRAN (R 3.6.0)
 #  backports     1.1.6   2020-04-05 [1] CRAN (R 3.6.3)
@@ -83,22 +86,29 @@ sessioninfo::session_info()
 #  fs            1.4.1   2020-04-04 [1] CRAN (R 3.6.3)
 #  glue          1.4.0   2020-04-03 [1] CRAN (R 3.6.3)
 #  here        * 0.1     2017-05-28 [1] CRAN (R 3.6.0)
+#  lifecycle     0.2.0   2020-03-06 [1] CRAN (R 3.6.0)
 #  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.0)
 #  memoise       1.1.0   2017-04-21 [1] CRAN (R 3.6.0)
 #  packrat       0.5.0   2018-11-14 [1] CRAN (R 3.6.0)
+#  pillar        1.4.3   2019-12-20 [1] CRAN (R 3.6.0)
 #  pkgbuild      1.0.6   2019-10-09 [1] CRAN (R 3.6.0)
+#  pkgconfig     2.0.3   2019-09-22 [1] CRAN (R 3.6.1)
 #  pkgload       1.0.2   2018-10-29 [1] CRAN (R 3.6.0)
 #  prettyunits   1.1.1   2020-01-24 [1] CRAN (R 3.6.2)
 #  processx      3.4.2   2020-02-09 [1] CRAN (R 3.6.0)
 #  ps            1.3.2   2020-02-13 [1] CRAN (R 3.6.0)
+#  purrr         0.3.3   2019-10-18 [1] CRAN (R 3.6.0)
 #  R6            2.4.1   2019-11-12 [1] CRAN (R 3.6.1)
 #  remotes       2.1.1   2020-02-15 [1] CRAN (R 3.6.0)
 #  rlang         0.4.5   2020-03-01 [1] CRAN (R 3.6.0)
 #  rprojroot     1.3-2   2018-01-03 [1] CRAN (R 3.6.0)
 #  rstudioapi    0.11    2020-02-07 [1] CRAN (R 3.6.0)
 #  sessioninfo * 1.1.1   2018-11-05 [1] CRAN (R 3.6.0)
+#  styler      * 1.3.2   2020-02-23 [1] CRAN (R 3.6.0)
 #  testthat    * 2.3.2   2020-03-02 [1] CRAN (R 3.6.2)
+#  tibble        3.0.0   2020-03-30 [1] CRAN (R 3.6.2)
 #  usethis     * 1.6.0   2020-04-09 [1] CRAN (R 3.6.3)
+#  vctrs         0.2.4   2020-03-10 [1] CRAN (R 3.6.0)
 #  withr         2.1.2   2018-03-15 [1] CRAN (R 3.6.0)
 #
 # [1] /Library/Frameworks/R.framework/Versions/3.6/Resources/library
