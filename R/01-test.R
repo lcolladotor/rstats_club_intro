@@ -68,6 +68,9 @@ styler::style_dir(here::here("R"), transformers = bioc_style)
 ## Version control
 usethis::use_git()
 
+## Configure with GitHub
+usethis::use_github()
+
 ## Reproducibility information
 print("Reproducibility information:")
 Sys.time()
