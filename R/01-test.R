@@ -69,7 +69,11 @@ styler::style_dir(here::here("R"), transformers = bioc_style)
 usethis::use_git()
 
 ## Configure with GitHub
+## Created https://github.com/lcolladotor/rstats_club_intro
 usethis::use_github()
+
+## Push to github (from the terminal)
+# git push --set-upstream origin master
 
 ## Reproducibility information
 print("Reproducibility information:")
